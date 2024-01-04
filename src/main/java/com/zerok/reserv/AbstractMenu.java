@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 abstract class AbstractMenu implements Menu{
     protected String menuText;
-    protected Menu preMenu;
+    protected Menu prevMenu;
     protected static final Scanner scanner = new Scanner(System.in);
 
-    public AbstractMenu(String menuText, Menu preMenu){
+    public AbstractMenu(String menuText, Menu prevMenu){
         this.menuText = menuText;
-        this.preMenu = preMenu;
+        this.prevMenu = prevMenu;
     }
 
     public void print(){
         System.out.println("\n" + menuText); //메뉴출력
     }
 
-    public void setPreMenu(Menu preMenu){
-        this.preMenu = preMenu;
+    public void setPrevMenu(Menu prevMenu){
+        this.prevMenu = prevMenu;
     }
 }
